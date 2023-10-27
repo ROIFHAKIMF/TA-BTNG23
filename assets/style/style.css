@@ -1,0 +1,671 @@
+* , html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'poppins';
+}
+#home>img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+}
+#home .d-flex{
+z-index: 0;
+color: white !important;
+position: relative;
+}
+#home{
+    position: relative;
+}
+.container{
+    z-index: 1;
+}
+.bg-info{
+    background-color: aqua !important;
+}
+.text-white{
+    color: aqua !important;
+}
+.navbar{
+    z-index: 999;
+}
+.nav-item a{
+    transition: all .3s ease-out;
+    position: relative;
+    overflow: hidden;
+    font-family: 'poppins';
+    font-weight: 700;
+}
+.nav-item a:hover{
+    transform: scale(1.1);
+    margin-top: 5px;
+    border-bottom: 3px solid aqua;
+    border-radius: 5px;
+    padding: 0 0 0 0 ;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+.d-flex img{
+    width: 25%;
+}
+.border-foto{
+    border: 2px solid aqua;
+    border-radius: 60% 30% 30% 40%;
+    float: left;
+    box-shadow: 0 0 20px aqua, 0 0 50px aquamarine;
+    animation: gaje 3s infinite 1s forwards;
+    z-index: 9999;
+}
+.border-foto:hover{
+    border: 5px solid aqua;
+    box-shadow: 0 0 20000px rgb(0, 247, 255);
+    cursor: pointer;
+    animation: none;
+    z-index: 999;
+}
+.d-flex .box{
+    border: 1px none aqua !important;
+    width: 50%;
+    margin-left:5% ;
+    height: max-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: 20px 20px 20px 20px;
+    font-family: 'poppins';
+    overflow: hidden;
+}
+.d-flex .box h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: aqua;
+    text-shadow: 4px 6px 6px rgb(0, 0, 0);
+}
+.d-flex .box p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: aqua;
+    animation: fade 4s infinite forwards;
+    text-shadow: 5px 5px 8px black;
+    opacity: 1;
+    overflow: hidden;
+}
+@keyframes fade{
+    from{color: rgb(1,28,40); opacity: 1; left: -100%; text-shadow: none;}
+    to{color: aqua; opacity: 1; left: 0; text-shadow: 5px 5px 8px black;}
+}
+
+@keyframes gaje {
+    0%{
+        box-shadow: 0 0 20px rgb(0, 255, 255), 0 0 50px rgb(7, 73, 65);
+    }
+    100%{
+        box-shadow: 0 0 20px rgb(0, 255, 255),0 0 50px rgb(0,115,139);
+    }
+}
+
+.typing{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(24)infinite ;
+    width: fit-content;
+    height: fit-content;
+}
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+.tombol{
+    overflow: hidden;
+    width: 100%;
+    top: 0%;
+    border: white 2px none;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10%;
+    flex-direction: row;
+    position: absolute;
+    z-index: 1;
+}
+.tombol a{
+    color: aqua;
+    font-size: 2rem;
+    transition: all 1s ease-out 1s;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.tombol a:hover{
+background-color: aqua;
+color: #000;
+cursor: pointer;
+box-shadow:0 0 5px aqua, 0 0 50px aqua , 0 0 250px aqua;
+-webkit-box-reflect: below 1px linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0,0.5));
+transition: all 1s ease-out ;
+}
+a .top{
+    width: 100%;
+    height: 5px;
+    background:linear-gradient(90deg,transparent,aqua);
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: move1 2s infinite ;
+}
+a .right{
+    width: 5px;
+    height: 100%;
+    background:linear-gradient(transparent,aqua);
+    top: 0;
+    right: 0;
+    position: absolute;
+    animation: move3 2s infinite .5s;
+}
+@keyframes move2{
+    0%{right: -100%;}
+    50%{right: 100%;}
+    50.1%{right: -100%;}
+    100%{right: 100%;}
+}
+a .bottom{
+    width: 100%;
+    height: 5px;
+    background:linear-gradient(90deg,transparent,aqua);
+    bottom: 0;
+    transform: rotateZ(180deg);
+    right: 0;
+    position: absolute;
+    animation: move2 2s infinite .1s; 
+}
+@keyframes move1 {
+    0%{left: -100%;}
+    50%{left: 100%;}
+    50.5%{left: -100%;}
+    100%{left: 100%;}
+}
+@keyframes move3 {
+    0%{top: -100%;}
+    50%{top:100%;}
+    50.5%{top: -100%;}
+    100%{top:100%;}
+}
+a .left{
+    width: 5px;
+    height: 100%;
+    background:linear-gradient(transparent,aqua);
+    transform: rotateZ(180deg);
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: move4 2s infinite 1.5s;
+}
+
+@keyframes move4 {
+    0%{top: 100%;}
+    50%{top:-100%;}
+    50.5%{top: 100%;}
+    100%{top:-100%;}
+}
+
+.container{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 3%;
+}
+
+#about h1{
+    font-family: 'poppins';
+    font-weight: 900;
+    /* color: rgb(255, 255, 255); */
+    color: aqua;
+    text-shadow: 4px 4px 10px rgb(0, 0, 0);
+    font-size: 2.5rem;
+    padding: 10px;
+    z-index: 2;
+}
+#about>img{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    position: absolute;
+    isolation: isolate;
+}
+#about::before{
+    content: " ";
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgb(9,24,35), rgba(9,24,35,0.8) 40%, transparent 50%, rgba(5,26,55,0.8) 60%, rgb(5,26,55) 100%);
+    position: absolute;
+    z-index: 1;
+}
+.card {
+    width: 80%;
+    height:75%;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 2;
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 25px aqua;
+    border-radius: 50px;
+    transition: all 2.5s ease-in 5s;
+}
+.container .card > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+.card .hide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.75) 100%);
+    color: white;
+    left: -100%;
+    text-shadow: 2px 2px 10px aqua;
+    top:100%;
+    z-index: 1;
+    transition: 1s all 5s;
+    transform: matrix(0.5);
+}
+.card:hover{
+    box-shadow: 0 0 0px aqua, 0 0px 5px aqua,
+    50px -25px 100px rgba(0, 255, 255, 0.493);
+    transition: all 2.5s ease-in;
+}
+.card:hover>.hide{
+    transition: all 1.5s ease-out;
+    color: #ffffff;
+    left: 0;
+    top: 0;
+    transform: scale(1);
+}
+table , tr, td{
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    text-align: left;
+    margin: 20px;
+}
+#about{
+    overflow: hidden;
+}
+#skill{
+    height: 100vh;
+    margin-top: 0 !important;
+}
+
+#skill>img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    isolation: isolate;
+}
+#exp{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: rgb(0, 39, 71);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+}
+#exp::before{
+    content: " ";
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(8,8,42) 0%,rgba(8,8,42,0.4) 80%,transparent 100%);
+    z-index: 1;
+    position: absolute;
+}
+#exp > img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
+#exp H1{
+        z-index: 1;
+        font-family: 'poppins';
+        font-weight: 900;
+        padding-top: 5%;
+        text-shadow: 5px 5px 10px black;
+}
+#exp .slider{
+    width: 80%;
+    height: 75%;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 60px;
+    border: 3px solid rgb(0, 166, 255);
+    z-index: 1;
+    margin:10px;
+    box-shadow: 0 0 20px rgb(0, 112, 176), 0 0 60px rgb(0, 162, 255)
+}
+.slider .carousel{
+    position: relative;
+    width: 500%;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    animation: slider 15s infinite;
+    box-sizing: border-box;
+}
+.slider .carousel img{
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    object-position:0% 5% ;
+    float:left;
+    box-sizing: border-box;
+}
+@keyframes slider {
+    0%{left: 0;}
+    25%{left: 0;}
+    30%{left: -100%;}
+    55%{left: -100%;}
+    60%{left: -200%;}
+    95%{left: -200%;}
+    100%{left: -300%;}
+}
+#contact{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: rgb(0, 39, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#contact>img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+#contact .container .wadah {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.519);
+    border-radius: 25px;
+    border: 2px solid white;
+}
+.wadah .input{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000
+}
+.wadah .input .naem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+.wadah .input .nama{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+.wadah .input .email{
+    width:100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+.input .pesan{
+    color: white;
+    display: flex;
+    width: 97%;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+.input .pesan textarea{
+    width: 100%;
+    resize: none;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+.input-nama{
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+}
+.input-email{
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.input .button{
+    width: 98%;
+    height:20%;
+    display: flex;
+    margin: 20px;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.input .button button{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: #ffffff 2px solid;
+    margin: 10px;
+}
+.wadah .sosmed{
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: smaller;
+}
+.wadah .sosmed .wa, .ig, .tt, .lin{
+    width: 25%;
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sosmed .wa>img{
+    width: 50px;
+    height: 50px;
+}
+.sosmed .tt>img{
+    width: 50px;
+    height: 50px;
+}
+.sosmed .ig>img{
+    width: 50px;
+    height: 50px;
+}
+.sosmed .lin>img{
+    width: 50px;
+    height: 50px;
+}
+.sosmed .lin>h1{
+font-size: 1.5rem;
+}
+.sosmed .tt>h1{
+font-size: 1.5rem;
+}
+.sosmed .wa>h1{
+font-size: 1.5rem;
+}
+.sosmed .ig>h1{
+font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width : 992px) {
+    .box .typing h1{
+        font-size: 2.5rem;
+    }
+    .d-flex .box p{
+        font-size: 1rem;
+    }
+    .navbar-collapse{
+        background: linear-gradient(90deg,transparent ,rgba(50,50,50,0.5),transparent);
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+        display: flex ;
+        align-items: center;
+    }
+    .nav-item a{
+        width: max-content;
+    }
+    .card{
+        width: 100%;
+        height: 60%;
+    }
+    table tr td{
+        font-size: 1rem;
+    }
+    .tombol a{
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        transition: all 1s ease;
+    }
+
+    .wadah .sosmed .wa, .ig, .tt, .lin{
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        word-wrap: normal;
+    }
+
+    .sosmed .lin>h1{
+        font-size: .8rem;
+        word-wrap: initial;
+        }
+        .sosmed .tt>h1{
+        font-size: .8rem;
+        }
+        .sosmed .wa>h1{
+        font-size: .8rem;
+        }
+        .sosmed .ig>h1{
+        font-size: .8rem;
+        }
+        .sosmed .wa>img{
+            width: 40px;
+            height: 40px;
+        }
+        .sosmed .tt>img{
+            width: 40px;
+            height: 40px;
+        }
+        .sosmed .ig>img{
+            width: 40px;
+            height: 40px;
+        }
+        .sosmed .lin>img{
+            width: 40px;
+            height: 40px;
+        }
+}
+
+@media screen and (max-width : 678px){
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all .5s ease-out;
+    }
+    .d-flex img{
+        width: 40%;
+        padding: 0;
+        margin-top: -20%;
+        margin-bottom: 20px;
+        transition: all 1s ease-out;
+    }
+    .d-flex .box{
+        margin: 0;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .box .typing h1{
+        font-size: 2.6rem
+    }
+
+    .navbar-collapse{
+        background: linear-gradient(90deg,transparent ,rgba(50,50,50,0.5),transparent);
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+        display: flex ;
+        align-items: center;
+    }
+    .nav-item a{
+        width: max-content;
+    }
+    .tombol a{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .card{
+        width: 100%;
+        height: 70%;
+    }
+}
